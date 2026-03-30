@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-dq@ui&d4n8yympe#^1=8s-gsq0pr_jv$e8kd*)8v8x$uk5yf8#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.localhost',
+    '127.0.0.1',
+    '[::1]','wikidungeons.onrender.com',
+]
 
 
 # Application definition
