@@ -1,0 +1,148 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #590C13;
+}
+.top-header{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    color: white;
+    margin-top: 0px;
+    background-color: #590C13;
+}
+.top-header ul{
+    border-top: 4px solid black;
+    padding: 20px;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 150px;
+}
+.top-header li{
+    cursor: pointer;
+    padding: 40px;
+    list-style: none;
+    background-color: rgb(255, 60, 0);
+    border:2px solid black;
+    box-shadow: 1px 1px 1px 1px;
+    font-size: x-large;
+}
+.rest-body{
+    background-color: #ED1C24;
+    color: white;
+    font-style: none;
+}
+a{
+    color: white;
+}
+.articles-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articles-content{
+    border: 4px solid black;
+    margin: 0px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    max-width: 200px;
+    gap: 10px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(odd) {
+  background-color: #f47c7c;
+}
+.categories-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Cards of categories */
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+
+}
+
+.cards .red {
+  background-color: #f43f5e;
+  box-shadow: 10px 10px 0px 0px;
+  border: 2px solid white;
+  text-decoration: none;
+
+}
+.cards a{
+    text-decoration: none;
+    font-size: x-large;
+}
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 200px;
+  max-height: 200px;
+}
+.campaign-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr {
+  width: 100%;        /* 🔥 clave */
+  height: 1px;
+  border: none;
+  background: #000;
+  display: block;     /* evita comportamientos raros */
+}
