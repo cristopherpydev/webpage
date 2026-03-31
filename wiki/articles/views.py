@@ -11,9 +11,10 @@ def list_articles(request):
 def article_detail(request, article_slug:str):
     try:
         article = Article.objects.get(slug=article_slug)
+        category = article.category
     except Article.DoesNotExist:
         return HttpResponse(f"This does not exists.")
-    return render(request, 'documents/article.html', {'article':article})
+    return render(request, 'documents/article.html', {'article':article, 'category':category})
 
 def list_categories(request):
     '''rendering all categories'''
