@@ -14,9 +14,9 @@
         <p>This is the homepage for the Wiki. We are still under construction.</p>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href=""></a>Categories</li>
-                <li><a href=""></a>Campaigns</li>
+                <a href="/"><li>Home</li></a>
+                <a href=""><li>Categories</li></a>
+                <a href=""><li>Campaigns</li></a>
             </ul>
         </nav>
     </header>
@@ -24,10 +24,19 @@
         <div class="card">
             <div class="title">
                 <h1>{{article.title}}</h1>
-                <p><i>Category: {{category}}</i></p>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Campaign</th>
+                    </tr> 
+                        <th>{{article.category}}</th>
+                        <th>{{article.campaign}}</th>
+                    <tr>
+                    </tr>
+                </table>
             </div>
             <div class="content">
-                <p>{{article.content}}</p>
+                <p>{{ article.content|linebreaks }}</p>
             </div>
         </div>
     </div>

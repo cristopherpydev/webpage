@@ -9,15 +9,7 @@ class Category(models.Model):
         return self.category_name
     
 #1tomany relationship    
-class Article(models.Model):
-    '''Article class for the database mapping'''
-    title = models.CharField(max_length=64)
-    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, null=True, blank=True)
-    slug = models.SlugField(null=True)
-    content = models.TextField()
-    creation_date = models.DateTimeField(auto_now=True)
-    def __str__(self):
-        return self.title
+
     
 
 class Campaign(models.Model):
@@ -42,7 +34,22 @@ class Campaign(models.Model):
 class Character(models.Model):
     '''Character class for the database mapping'''
     name = models.CharField(max_length=64, blank=True)
-    birth_date = models.DateField()
+    appearance = models.TextField(default="")
+    birth_date = models.CharField(max_length=32)
+    age = models.IntegerField(default=1)
+    d_class = models.CharField(name="Class")
+    specie = models.CharField(default="Human", max_length=32)
     biography = models.TextField()
     campaign = models.ManyToManyField(Campaign, related_name='campaigns', blank=True)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, null=True, blank=True, default='character')
+
+class Article(models.Model):
+    '''Article class for the database mapping'''
+    title = models.CharField(max_length=64)
+    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, null=True, blank=True)
+    campaign = models.ForeignKey(Campaign, on_delete=models.DO_NOTHING, null=True, blank=True)
+    slug = models.SlugField(null=True)
+    content = models.TextField()
+    creation_date = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.title
