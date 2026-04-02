@@ -5,8 +5,13 @@ body{
     color: white;
 }
 /* mainpage config */
-
+.top-header img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
 .top-header{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -46,10 +51,14 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+.navegator{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .card{
     border: 10px solid white;
-
+    margin-top: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -63,10 +72,130 @@ body{
     border-bottom: 4px solid rgb(67, 120, 155);
     padding-bottom: 5px;
 }
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+
+}
+
+.cards .red {
+  background-color: #f43f5e;
+  box-shadow: 10px 10px 0px 0px;
+  border: 2px solid white;
+  text-decoration: none;
+
+}
+.cards a{
+    text-decoration: none;
+    font-size: x-large;
+}
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
 .title{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+
+.footer-social {
+  background-color: #020617;
+  color: #e5e7eb;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.footer-social-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: #e5e7eb;
+  color: #020617;
+  border-color: #e5e7eb;
+}
+
+.footer-social-copy {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.social-links .fa {
+  padding: 10px;
+  width: 36px;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #e5e7eb;
+  background-color: #111827;
+  margin: 0 4px;
+}
+
+.social-links .fa:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.table-content {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-content td, th {
+  border: 2px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  
 }
 
 @media (max-width: 480px) {

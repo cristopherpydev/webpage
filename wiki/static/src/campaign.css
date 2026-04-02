@@ -1,108 +1,83 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-color: #590C13;
-
+    background-color: black;
+    color: white;
 }
-/*hero*/
+/* mainpage config */
 .top-header img {
   width: 100%;
   object-fit: cover;
   display: block;
 }
-/* Navegation */
-nav{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: black;
-  border-image-source: url("../img/piedra.jpg");
-  border-image-slice: 60;
-  border-image-repeat: stretch;
-  border-image-width: 15px;
-  padding: 120px;
-}
-nav ul{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  list-style: none;
-}
-/*corp */
-.rest-body{
-    background-color: #ED1C24;
-    color: white;
-    font-style: none;
-
-}
-
-a{
-    color: white;
-}
-/*Divider*/
-.divider-center{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.divider{
-  max-width: 500px;
-  margin-top: -180px;
-}
-
-/* Articles */
-.articles-wrapper{
+.top-header{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
+    color: white;
+    margin-top: 0px;
+    background-color: #590C13;
 }
-.articles{
+.top-header a{
+    text-decoration: none;
+    color:white;
+}
+.top-header ul{
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 150px;
 }
-.articles-content{
-    border: 25px solid transparent;
-    border-image-source: url("../img/piedra.jpg");
-    border-image-slice: 60;
-    border-image-repeat: stretch; 
-    margin: 0px;
+.top-header li{
+    background-color: #f43f5e;
+    box-shadow: 10px 10px 0px 0px;
+    border: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    max-width: 200px;
-    gap: 10px;
-}
+    list-style: none;
+    border:2px solid black;
+    font-size: x-large;
+     border-radius: 10px;
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
 }
-td, th {
-  border: 2px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-tr:nth-child(odd) {
-  background-color: #e25757;
-}
-
-.categories-wrapper{
+/*=================== CONTENT ======================*/
+.content{
+    margin: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/*Cards of categories */
+.navegator{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.card{
+    border: 10px solid white;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 1200px;
+    background-color: #590C13;
+
+}
+.card h1{
+    border-bottom: 4px solid rgb(67, 120, 155);
+    padding-bottom: 5px;
+}
+
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 15px;
-  align-items: center;
+  gap: 35px;
 
 }
 
@@ -145,18 +120,10 @@ tr:nth-child(odd) {
   filter: blur(10px);
   transform: scale(0.9, 0.9);
 }
-
-.campaign-wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-hr {
-  width: 100%; 
-  height: 1px;
-  border: none;
-  background: #000;
-  display: block; 
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -217,4 +184,50 @@ hr {
 .social-links .fa:hover {
   background-color: #e5e7eb;
   color: #111827;
+}
+
+.table-content {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-content td, th {
+  border: 2px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  
+}
+
+@media (max-width: 480px) {
+    .top-header{
+        text-align: center;
+    }
+    .top-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+    .top-header ul {
+        text-align: center;
+        padding: 10px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+        border-width: 5px;
+        padding: 16px;
+        text-align: justify;
+    }
 }
