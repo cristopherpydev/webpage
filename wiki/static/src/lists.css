@@ -119,6 +119,101 @@ table{
   padding: 8px;
  
 }
+.categories-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Cards of categories */
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+
+}
+
+.cards ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+.cards .red {
+  background-color: #590C13;
+  opacity: 1;
+  border: 2px solid white;
+  text-decoration: none;
+
+}
+.cards .red p{
+  text-decoration: none;
+
+}
+
+
+.cards a{
+    text-decoration: none;
+    font-size: x-large;
+}
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards ul li{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+/*Buttons */
+
+.lore:hover{
+  background-image: url(../img/LORE.png);
+  opacity: 1;
+}
+.curiosities:hover{
+  background-image: url(../img/CURIOSITIES.png);
+  opacity: 1;
+
+}
+.rumours:hover{
+  background-image: url(../img/RUMOURS.png);
+  opacity: 1;
+}
+.characters:hover{
+  background-image: url(../img/CHARACTERS.png);
+  opacity: 1;
+}
+.lore:hover p{
+  display: none;
+}
+.curiosities:hover p{
+  display: none;
+}
+.rumours:hover p{
+  display: none;
+}
+.characters:hover p{
+  display: none;
+}
 
 @media (max-width: 480px) {
     .top-header{
@@ -167,5 +262,7 @@ table{
     text-align: center;
     padding: 8px;
     
-    }    
+    }
+
+    
 }
