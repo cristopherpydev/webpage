@@ -36,6 +36,6 @@ def show_form(request):
         
         except IntegrityError:
             messages.error(request, "You are already signed in!")
-            return redirect('documents/form.html')
+            return redirect('/heroes/')
 
     return render(request, 'documents/form.html')
