@@ -1,12 +1,45 @@
 body{
     padding: 0px;
     margin: 0px;
-}
-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 60px;
+    background-color: rgb(255, 165, 157);
+
+}
+form {
+    border: 4px solid black;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
     background-color: rgb(231, 49, 49);
+
+    padding: 20px;
+}
+
+.message{
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    max-width: 600px;
+    background-color: rgb(255, 0, 0);
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+.message a{
+    padding: 20px;
+    background-color: yellow;
+    border: 1px solid black;
+    text-decoration: none;
 }
 
 .part-1-box{
@@ -91,5 +124,8 @@ form{
     margin-bottom: 20px;
 }
 @media (max-width: 480px){
-
+    form {
+        width: 90%;
+        max-width: 600px;
+    }
 }

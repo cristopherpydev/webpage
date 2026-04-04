@@ -11,9 +11,10 @@
     {% if messages %}
         {% for message in messages %}
             <div class="message {{ message.tags }}">
-                {{ message }}
-            </div>
+                <p>{{ message }}</p>
         {% endfor %}
+            <a href="/" class="return"><p>Return Home</p></a>
+        </div>
     {% endif %}
     <form action="" method="post">
         {% csrf_token %}
