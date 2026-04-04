@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.db import IntegrityError
 from articles import models
 from .models import Person
+from django.contrib import messages
+
 def show_form(request):
     return render(request, 'documents/form.html', {})
 
@@ -10,8 +13,8 @@ def show_success(request):
 
 def show_form(request):
     if request.method  == 'POST':
-
-        person = Person.objects.create(
+        try:
+            person = Person.objects.create(
                 name=request.POST.get('name'),
                 mail=request.POST.get('mail'),
                 phone=request.POST.get('phone'),
@@ -29,7 +32,10 @@ def show_form(request):
                 first_term=bool(request.POST.get('first_term')),
                 second_term=bool(request.POST.get('second_term')),
             )
-
-        return redirect("./success/")
+            return redirect("./success/")    
+        
+        except IntegrityError:
+            messages.error(request, "You are already signed in!")
+            return redirect('documents/form.html')
 
     return render(request, 'documents/form.html')

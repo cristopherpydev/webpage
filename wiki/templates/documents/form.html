@@ -8,6 +8,13 @@
     <title>Heroes</title>
 </head>
 <body>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
     <form action="" method="post">
         {% csrf_token %}
 
@@ -42,7 +49,7 @@
                 <p>You have played...</p>
                 <div class="choices">
                     <div>
-                        <input type="checkbox" name="dnd5" id="dnd5">
+                        <input type="checkbox" name="dnd" id="dnd5">
                         <label for="dnd5">D&D 5e</label>
                     </div>
 
@@ -100,13 +107,13 @@
 
                 <div class="acceptance">
                     <div class="first">
-                        <input type="checkbox" name="first-term" id="first-term" required>
-                        <label for="first-term">I accept to publish my data to the administrators.</label>
+                        <input type="checkbox" name="first_term" id="first_term" required>
+                        <label for="first_term">I accept to publish my data to the administrators.(* mandatory)</label>
                     </div>
 
                     <div class="second">
-                        <input type="checkbox" name="second-term" id="second-term" required>
-                        <label for="second-term">I accept to join in the Discord server and social media groups.</label>
+                        <input type="checkbox" name="second_term" id="second_term">
+                        <label for="second_term">I accept to join in the Discord server and social media groups.</label>
                     </div>
                 </div>
             </div>
