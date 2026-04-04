@@ -10,13 +10,13 @@ body{
   object-fit: cover;
   display: block;
 }
-/* Navegation */
+/* Navigation */
 nav{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
-  border-image-source: url("../img/piedra.jpg");
+  background-image: url("../img/piedra.jpg");
+  border-image-source: url("../img/copper.jpg");
   border-image-slice: 60;
   border-image-repeat: stretch;
   border-image-width: 15px;
@@ -25,13 +25,14 @@ nav{
 nav ul{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   list-style: none;
 }
+
 /*corp */
 .rest-body{
-    background-color: #ED1C24;
+    background-color: #8C111B;
     color: white;
     font-style: none;
 
@@ -40,15 +41,40 @@ nav ul{
 a{
     color: white;
 }
+.article:hover{
+  background-image: url(../img/ARTICLES.png);
+  opacity: 1;
+}
+.category:hover{
+  background-image: url(../img/CATEGORIES.png);
+  opacity: 1;
+
+}
+.campaign:hover{
+  background-image: url(../img/CAMPAIGNS.png);
+  opacity: 1;
+}
+.article:hover p{
+  display: none;
+}
+.category:hover p{
+  display: none;
+}
+.campaign:hover p{
+  display: none;
+}
 /*Divider*/
 .divider-center{
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .divider{
   max-width: 500px;
-  margin-top: -180px;
+  margin-top: -110px;
+  z-index: 0;
+
 }
 
 /* Articles */
@@ -97,6 +123,7 @@ tr:nth-child(odd) {
     align-items: center;
 }
 /*Cards of categories */
+
 .cards {
   display: flex;
   flex-direction: row;
@@ -106,13 +133,25 @@ tr:nth-child(odd) {
 
 }
 
+.cards ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
 .cards .red {
-  background-color: #f43f5e;
-  box-shadow: 10px 10px 0px 0px;
+  background-color: #590C13;
+  opacity: 1;
   border: 2px solid white;
   text-decoration: none;
 
 }
+.cards .red p{
+  text-decoration: none;
+
+}
+
+
 .cards a{
     text-decoration: none;
     font-size: x-large;
@@ -132,19 +171,49 @@ tr:nth-child(odd) {
   transition: 400ms;
 }
 
-.cards .card p.tip {
-  font-size: 1em;
-  font-weight: 700;
-}
-
 .cards .card:hover {
   transform: scale(1.1, 1.1);
 }
 
-.cards:hover > .card:not(:hover) {
-  filter: blur(10px);
-  transform: scale(0.9, 0.9);
+.cards ul li{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
+
+/*Buttons */
+
+.lore:hover{
+  background-image: url(../img/LORE.png);
+  opacity: 1;
+}
+.curiosities:hover{
+  background-image: url(../img/CURIOSITIES.png);
+  opacity: 1;
+
+}
+.rumours:hover{
+  background-image: url(../img/RUMOURS.png);
+  opacity: 1;
+}
+.characters:hover{
+  background-image: url(../img/CHARACTERS.png);
+  opacity: 1;
+}
+.lore:hover p{
+  display: none;
+}
+.curiosities:hover p{
+  display: none;
+}
+.rumours:hover p{
+  display: none;
+}
+.characters:hover p{
+  display: none;
+}
+
+/*Campaigns */
 
 .campaign-wrapper{
   display: flex;
@@ -158,7 +227,21 @@ hr {
   background: #000;
   display: block; 
 }
+.join-us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wanted-poster{
+  border: 25px solid transparent;
+  border-image-source: url("../img/wooden.jpg");
+  border-image-slice: 60;
+  border-image-repeat: stretch; 
+  margin-bottom: 20px;
 
+}
+
+/*Footer*/
 
 .footer-social {
   background-color: #020617;

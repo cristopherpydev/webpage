@@ -9,7 +9,7 @@ urlpatterns = [
     path('', views.list_articles, name='list-articles'),
     path('article/<slug:article_slug>/', views.article_detail, name='article-detail'),
     path('category/<slug:category_slug>/',views.category_home_detail, name='category-detail'),
-    path('article/category/',views.list_categories),
+    path('categories/',views.list_categories),
     path('campaign/<slug:campaign_slug>/', views.campaign_detail, name='campaign-detail'),
     path('campaigns/', views.list_campaigns),
     path('articles/article/', views.list_articles),

@@ -1,0 +1,95 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(231, 49, 49);
+}
+
+.part-1-box{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+.part-1-box label{
+    color: rgb(255, 0, 0);
+}
+.main-data{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 700px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.main-data input{
+    height: 30px;
+    font-size: 16px;
+}
+
+.part-2-box{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+.part-2-box label{
+    color: rgb(255, 0, 0);
+}
+.secundary-data{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 700px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.secundary-data input{
+    height: 30px;
+    font-size: 16px;
+}
+
+
+.choices{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    align-items: center;
+    gap: 20px;
+
+}
+.choices label{
+    color: black;
+}
+
+.acceptance{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 20px;
+}
+.first{
+    display: flex;
+    align-items: center;
+}
+.second{
+    display: flex;
+    align-items: center;
+}
+/*Mobile phone responsive */
+.submit{
+    width: 120px;
+    height: 50px;
+    background-color: yellow;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+@media (max-width: 480px){
+
+}

@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.homepage),
     path('salute/', views.salute),
     path('articles/', include('articles.urls')),
+    path('heroes/', include('heroes.urls')),
     ]

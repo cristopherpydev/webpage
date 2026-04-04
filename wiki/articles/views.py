@@ -20,6 +20,7 @@ def list_categories(request):
     '''rendering all categories'''
     categories = Category.objects.all()
     return render(request, 'documents/categories.html', {'categories':categories})
+
 def category_home_detail(request, category_slug:str):
     category = Category.objects.get(slug=category_slug)    
     articles = Article.objects.filter(category=category)    

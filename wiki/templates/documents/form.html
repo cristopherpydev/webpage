@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'src/form.css' %}">
+    <title>Heroes</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="part-1-box">
+            <h2>Part I: Personal Information</h2>
+            <p><i>Write down your personal information so we can contact you immediately!</i></p>
+
+            <div class="main-data">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" maxlength="42" placeholder="Write your name" required>
+
+                <label for="mail">Mail</label>
+                <input type="email" id="mail" name="mail" maxlength="46" placeholder="example@gmail.com" required>
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" inputmode="numeric" pattern="\d{9}" maxlength="9" placeholder="Example: 678958595" required>
+            </div>
+        </div>
+
+        <div class="part-2-box">
+            <h2>Part II: Background</h2>
+            <p><i>Whether this is your first experience playing or not, we want to know a little bit about your journey!</i></p>
+
+            <div class="secundary-data">
+                <label for="experience">Previous Experience</label>
+                <select id="experience" name="experience" required>
+                    <option value="adventurer">Adventurer: I'm starting my first adventure.</option>
+                    <option value="experienced">Experienced: I have played some campaigns/oneshots, yet I'm thrilled about new games.</option>
+                    <option value="hero">Hero: Many campaigns from different rulesets over my shoulders. Some bards would write a song about me!</option>
+                </select>
+
+                <p>You have played...</p>
+                <div class="choices">
+                    <div>
+                        <input type="checkbox" name="dnd5" id="dnd5">
+                        <label for="dnd5">D&D 5e</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="pathfinder" id="pathfinder">
+                        <label for="pathfinder">Pathfinder</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="cthulhu" id="cthulhu">
+                        <label for="cthulhu">Call of C'thulhu</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="indie" id="indie">
+                        <label for="indie">Indie</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="others" id="others">
+                        <label for="others">Others</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="none" id="none">
+                        <label for="none">None</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="part-2-box">
+            <h2>Part III: Interests</h2>
+            <p><i>We want to get to know you! Write down your interests or your expectations in order to assign you to a group.</i></p>
+
+            <div class="secundary-data">
+                <label for="interests">Interests</label>
+                <textarea id="interests" name="interests" cols="40" rows="5" placeholder="Write down your interests."></textarea>
+
+                <label for="modality">Modality</label>
+                <select id="modality" name="modality" required>
+                    <option value="online">Online (Roll20, Discord...)</option>
+                    <option value="face2face">Face 2 face</option>
+                    <option value="mix">Mix</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="part-2-box">
+            <h2>Part IV: Last words...</h2>
+            <p><i>In order to get you involved in a new adventure, you must understand and accept certain things.</i></p>
+
+            <div class="secundary-data">
+                <p>Dungeons and Dragons will never publish any of your personal information. In order to get involved in the Discord server / social media channels you must first accept the terms and conditions below.</p>
+
+                <div class="acceptance">
+                    <div class="first">
+                        <input type="checkbox" name="first-term" id="first-term" required>
+                        <label for="first-term">I accept to publish my data to the administrators.</label>
+                    </div>
+
+                    <div class="second">
+                        <input type="checkbox" name="second-term" id="second-term" required>
+                        <label for="second-term">I accept to join in the Discord server and social media groups.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</body>
+</html>

@@ -14,16 +14,16 @@
 </head>
 <body>
     <header class="top-header">
-        <a href="/"><img src="{% static 'img/banner.png' %}"></a>
+        <a href="/"><img src="{% static 'img/banner_vidriera.png' %}"></a>
     </header>
         <div class="rest-body">
             <nav>
                 <div class="cards">
                     <ul>
-                        <li><a href="./articles/"><div class="card red"><p>Articles</p></div></a></li>
-                        <li><a href="./articles/"><div class="card red"><p>Categories</p></div></a></li>
-                        <li><a href="./articles/campaigns/"><div class="card red"><p>Campaigns</p></div></a></li>
-                        <li><a href="./admin/"><div class="card red"><p>Admin</p></div></a></li>
+                        <li><a href="./articles/"><div class="card red article"><p>Articles</p></div></a></li>
+                        <li><a href="/articles/categories/"><div class="card red category"><p>Categories</p></div></a></li>
+                        <li><a href="./articles/campaigns/"><div class="card red campaign"><p>Campaigns</p></div></a></li>
+                        <!-- <li><a href="./admin/"><div class="card red"><p>Admin</p></div></a></li> -->
                     </ul>
                 </div>
             </nav>
@@ -54,12 +54,13 @@
             <hr>
             <div class="categories-wrapper">
                 <h2>Categories</h2>
-                <div class="cards">
-                {% for category in categories %}
-                    <div class="card red">
-                        <a href="{% url 'articles:category-detail' category.slug %}"><p class="tip">{{ category.category_name }}</p></a>
-                    </div>
-                {% endfor %}
+                    <div class="cards">
+                        <ul>
+                            {% for category in categories %}
+                            <li><a href="{% url 'articles:category-detail' category.slug %}"><div class="card red {% cycle 'lore' 'curiosities' 'rumours' 'characters' %}"><p>{{ category.category_name }}</p></div></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>                            
             </div>
             <br>
             <hr>
@@ -78,6 +79,10 @@
                     </tr>
                     {% endfor %}
                 </table>        
+            </div>
+            <div class="join-us">
+                <h1>Wanted: Heroes!</h1>
+                <a href="/heroes/"><img src="{% static 'img/sam.jpg' %}" alt="" class="wanted-poster"></a>
             </div>
         </div>
     </div>
